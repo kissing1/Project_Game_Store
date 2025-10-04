@@ -1,0 +1,18 @@
+<header class="header">
+  <!-- Left: Logo + Title -->
+  <div class="left-section">
+    <div class="logo-wrapper">
+      <img src="/game_stores/targaryen_dragon.png" alt="logo" class="logo" />
+    </div>
+    <span class="title">GAEME ONLINE</span>
+    <span class="timer">00.00</span>
+  </div>
+
+  <!-- Right: Navigation -->
+  <nav class="nav">
+    <a routerLink="/mainuser" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">HOME</a>
+    <a routerLink="/trolley" routerLinkActive="active">MY TROLLEY</a>
+    <a routerLink="/rank" routerLinkActive="active">RANK</a>
+   <a [routerLink]="['/userprofile']" [queryParams]="{ id: userId }" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">PROFILE</a>
+  </nav>
+</header>

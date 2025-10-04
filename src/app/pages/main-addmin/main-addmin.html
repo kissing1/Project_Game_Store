@@ -1,0 +1,76 @@
+<div class="main-container">
+  <!-- พื้นหลัง -->
+  <img src="/game_stores/Black_Red_Minimal.png" alt="bg" class="background" />
+  <img src="/game_stores/dragon_head_claws.png" alt="dragon" class="dragon-center" />
+
+  <!-- ส่วนค้นหา -->
+  <div class="search-bar">
+    <input type="text" placeholder="ค้นหาชื่อเกม" />
+    <input type="text" placeholder="ค้นหา ประเภทเกม" />
+    <button>ค้นหา</button>
+    <button class="add-btn">เพิ่มเกม</button>
+    <button class="discount-btn">ออกโค้ดส่วนลด</button>
+  </div>
+
+  <!-- แสดงรายการเกม -->
+  <div class="game-list">
+    <!-- Silent Hill -->
+    <div class="game-card">
+      <img src="/game_stores/Silent_Hill_f_cover_art.png" alt="Silent Hill" />
+      <div class="info">
+        <h3 class="name">silent hill</h3>
+        <p class="type">ประเภท: สยองขวัญ</p>
+        <p class="price">ราคา: 1,200</p>
+      </div>
+      <div class="card-actions">
+        <button class="delete-btn">ลบ</button>
+        <button class="edit-btn">แก้ไข</button>
+      </div>
+    </div>
+
+    <!-- God of War -->
+    <div class="game-card">
+      <img src="/game_stores/images.jpg" alt="God of War" />
+      <div class="info">
+        <h3 class="name">God of war</h3>
+        <p class="type">ประเภท: แอคชั่น</p>
+        <p class="price">ราคา: 2,000</p>
+      </div>
+      <div class="card-actions">
+        <button class="delete-btn">ลบ</button>
+        <button class="edit-btn">แก้ไข</button>
+      </div>
+    </div>
+
+    <!-- Genshin Impact -->
+    <div class="game-card">
+      <img src="/game_stores/genshin.jpg" alt="Genshin Impact" />
+      <div class="info">
+        <h3 class="name">genshin impact</h3>
+        <p class="type">ประเภท: ต่อสู้</p>
+        <p class="price">ราคา: 0.00</p>
+      </div>
+      <div class="card-actions">
+        <button class="delete-btn">ลบ</button>
+        <button class="edit-btn">แก้ไข</button>
+      </div>
+    </div>
+
+    <!-- Black Myth Wukong -->
+    <div class="game-card">
+      <img src="/game_stores/download.jpg" alt="Black Myth Wukong" />
+      <div class="info">
+        <h3 class="name">Black Myth: Wukong</h3>
+        <p class="type">ประเภท: ต่อสู้</p>
+        <p class="price">ราคา: 2,020</p>
+      </div>
+      <div class="card-actions">
+        <button class="delete-btn">ลบ</button>
+        <button class="edit-btn">แก้ไข</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ปุ่ม logout -->
+  <button (click)="doLogout()" class="logout-btn">logout</button>
+</div>

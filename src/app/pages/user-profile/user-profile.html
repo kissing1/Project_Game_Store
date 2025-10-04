@@ -1,0 +1,64 @@
+<div class="profile-container">
+  <div class="background"></div>
+  <img src="/game_stores/drogon_fire.png" alt="dragon" class="dragon-top" />
+
+  <!-- กล่องข้อมูล -->
+  <div class="profile-box">
+    <img
+      [src]="previewUrl || user?.avatar_url || '/game_stores/profile.png'"
+      alt="profile"
+      class="profile-icon"
+      [class.editable]="isEditing"
+      (click)="isEditing && onAvatarClick()"
+    />
+
+    <!-- input file -->
+    <input
+      type="file"
+      #avatarInput
+      accept="image/*"
+      style="display: none"
+      (change)="onFileSelected($event)"
+    />
+
+    <div class="user-info">
+      <p *ngIf="!isEditing"><span>ชื่อ :</span> {{ user?.username }}</p>
+      <input
+        *ngIf="isEditing"
+        [(ngModel)]="editUsername"
+        type="text"
+        class="edit-input"
+        placeholder="กรอกชื่อใหม่"
+      />
+
+      <p><span>อีเมล :</span> {{ user?.email || '-' }}</p>
+
+      <div class="edit-buttons">
+        <button *ngIf="!isEditing" class="btn-edit" (click)="enableEdit()">แก้ไขโปรไฟล์</button>
+        <div *ngIf="isEditing" class="confirm-group">
+          <button class="btn-confirm" (click)="confirmUpdate()">ยืนยัน</button>
+          <button class="btn-cancel" (click)="cancelEdit()">ยกเลิก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img src="/game_stores/toothless.png" alt="toothless" class="toothless" />
+
+  <div class="history-box">
+    <h3>ประวัติการใช้งาน</h3>
+    <p>เติมเงินเข้าบัญชี {{ '0.00' }} บาท</p>
+
+    <div
+      class="game-item"
+      *ngFor="let game of [
+        { name: 'SILENT HILL f', price: 1200, category: 'สยองขวัญ' },
+        { name: 'Black Myth: Wukong', price: 2020, category: 'ต่อสู้' },
+        { name: 'God of War', price: 2000, category: 'ต่อสู้' }
+      ]"
+    >
+      <p class="game-name">เกมที่ซื้อ: <span>{{ game.name }}</span> ราคา: {{ game.price | number }}</p>
+      <p class="game-type">ประเภท: {{ game.category }}</p>
+    </div>
+  </div>
+</div>

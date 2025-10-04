@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Antonio:wght@400;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.register-container {
+  background: url('/game_stores/Black_Red_Minimal.png') no-repeat center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* ทำให้ title อยู่ด้านบน login-box */
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: url('/game_stores/hexagon_pattern.png') no-repeat center center;
+  background-size: cover;
+  padding: 40px 30px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  position: relative;
+  width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Title อยู่นอกกล่อง */
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #d32f2f;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 3px;
+  font-family: 'Antonio', sans-serif; /* ใช้ Antonio เฉพาะ title */
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 20px;
+  color: #ff4444;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Profile Icon */
+.profile-icon {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  text-align: left;
+
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #ff4c4c;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #f2f2f2;
+    font-size: 14px;
+    transition: 0.3s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px #ff4c4c;
+    }
+  }
+}
+
+/* ปุ่มสมัคร */
+.register-btn {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff4c4c, #b71c1c);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 76, 76, 0.4);
+  }
+}
+
+/* ปุ่มกลับ */
+.back-btn {
+  display: block;
+  margin: 15px auto 0 auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffcc00;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center;
+
+  &:hover {
+    color: #ffd633;
+    text-decoration: underline;
+  }
+}
+
+/* Dragons */
+.dragon {
+  position: absolute;
+  width: 160px;
+  opacity: 0.9;
+}
+
+.dragon-left {
+  top: -70px;
+  left: -150px;
+}
+
+.dragon-right {
+  bottom: -40px;
+  right: -150px;
+}

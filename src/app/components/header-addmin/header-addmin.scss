@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&display=swap');
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7a0000; /* สีแดงเข้ม */
+  color: white;
+  padding: 10px 30px;
+  font-family: 'Antonio', sans-serif;   /* ✅ ใช้ฟอนต์ Antonio */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .logo {
+    height: 50px;
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+
+.center-section {
+  .admin-text {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+
+  .fire-dragon {
+    max-height: 80px;   /* ปรับตามต้องการ */
+    height: auto;       /* ให้ปรับอัตโนมัติ */
+    width: auto;        /* รักษาสัดส่วน */
+    object-fit: contain; /* ✅ ทำให้ภาพแสดงครบ ไม่ถูกครอป */
+  }
+}

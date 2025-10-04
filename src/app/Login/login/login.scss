@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.login-container {
+  background: url('/game_stores/Black_Red_Minimal.png') no-repeat center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: 
+    
+    url('/game_stores/hexagon_pattern.png') no-repeat center center;
+  background-size: cover;
+  padding: 40px 30px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  position: relative;
+  width: 380px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  font-size: 22px;
+  color: #ff4c4c;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ff4c4c;
+  margin-bottom: 25px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  text-align: left;
+
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #f2f2f2;
+    font-size: 14px;
+    transition: 0.3s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px #ff4c4c;
+    }
+  }
+}
+
+.login-btn {
+  display: block;       /* ทำให้ปุ่มเป็น block */
+  margin: 0 auto;       /* จัดให้อยู่ตรงกลาง */
+  width: 80%;           /* กำหนดความกว้าง ไม่เต็ม 100% จะดูบาลานซ์ */
+  padding: 12px;
+  background: linear-gradient(135deg, #ff4c4c, #b71c1c);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 76, 76, 0.4);
+  }
+}
+
+.register-box {
+  margin-top: 20px;
+  font-size: 14px;
+
+  .register-link {
+    margin-left: 5px;
+    color: #ff4c4c;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      text-decoration: underline;
+      color: #ff7777;
+    }
+  }
+}
+
+/* Dragons */
+.dragon {
+  position: absolute;
+  width: 160px;     /* ขนาดแสดงผล */
+  height: auto;     /* ให้ปรับสัดส่วนอัตโนมัติ */
+  max-width: 100%;  /* ป้องกันภาพเกินกรอบ */
+  opacity: 0.9;
+}
+.dragon-left {
+  top: -70px;
+  left: -150px;
+}
+
+.dragon-right {
+  bottom: -40px;
+  right: -150px;
+}

@@ -1,0 +1,33 @@
+<div class="login-container">
+  <div class="login-box">
+    <!-- Title -->
+    <h2 class="title">GAME DRAGON STORE</h2>
+    <h3 class="subtitle">LOGIN GAME</h3>
+
+    <!-- Dragon Images -->
+    <img src="/game_stores/flying_dragon.png" class="dragon dragon-left" width="160" height="160" />
+    <img src="/game_stores/Green_Dragon.png" class="dragon dragon-right" width="160" height="160" />
+
+    <!-- Form -->
+    <form (ngSubmit)="doLogin()" class="form-container">
+      <div class="form-group">
+        <label for="email">อีเมลล์</label>
+        <input id="email" type="email" [(ngModel)]="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">รหัสผ่าน</label>
+        <input id="password" type="password" [(ngModel)]="password" name="password" required />
+      </div>
+
+      <button  type="submit" class="login-btn">LOGIN</button>
+    </form>
+   
+
+    <!-- Register Link -->
+    <div class="register-box">
+      <span>ยังไม่มีบัญชี?</span>
+      <a routerLink="/registeruser" class="register-link">สมัครผู้ใช้</a>
+    </div>
+  </div>
+</div>

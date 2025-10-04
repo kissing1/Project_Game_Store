@@ -1,0 +1,150 @@
+.main-container {
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;        /* เอาช่องว่างออก */
+  padding-top: 20px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.dragon-center {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.search-bar {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  input {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    width: 200px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .add-btn {
+    background: yellow;
+    color: black;
+    font-weight: bold;
+  }
+
+  .discount-btn {
+    background: blue;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.game-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.game-card {
+  background: url('/game_stores/hexagon_pattern.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 220px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-card img {
+  width: 100%;
+  height: 280px;        /* ✅ รูปสูงเท่ากันทุกการ์ด */
+  object-fit: cover;    /* ✅ ตัดรูปไม่ให้บิด */
+  border-radius: 8px;
+}
+
+.info {
+  margin-top: 10px;
+  text-align: left;
+  min-height: 90px;     /* ✅ ข้อความสูงเท่ากัน */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.info .name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e53935;
+  margin-bottom: 5px;
+}
+
+.info .type,
+.info .price {
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;     /* ✅ ดันปุ่มลงล่าง */
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-btn {
+  background: yellow;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn {
+  margin: 30px auto;
+  padding: 12px 25px;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -1,0 +1,55 @@
+<div class="register-container">
+  <!-- Title อยู่นอกกล่อง -->
+  <h2 class="title">GAME   DRAGON   STORE</h2>
+
+  <div class="login-box">
+    <!-- Subtitle -->
+    <h3 class="subtitle">สมัครสมาชิก</h3>
+
+    <!-- Profile Icon -->
+    <!-- ✅ เมื่อกดรูปจะเรียก onAvatarClick() -->
+    <img
+      [src]="previewUrl || '/game_stores/profile.png'"
+      alt="profile"
+      class="profile-icon"
+      (click)="onAvatarClick()"
+    />
+
+    <!-- ✅ ซ่อน input file เอาไว้ -->
+    <input
+      type="file"
+      #avatarInput
+      accept="image/*"
+      style="display: none"
+      (change)="onFileSelected($event)"
+    />
+
+    <!-- Form -->
+    <form (ngSubmit)="onRegister()" class="form-container">
+      <div class="form-group">
+        <label for="email">อีเมลล์</label>
+        <input id="email" type="email" [(ngModel)]="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">รหัสผ่าน</label>
+        <input id="password" type="password" [(ngModel)]="password" name="password" required />
+      </div>
+
+      <div class="form-group">
+        <label for="username">ชื่อผู้ใช้</label>
+        <input id="username" type="text" [(ngModel)]="username" name="username" required />
+      </div>
+
+      <!-- Register Button -->
+      <button type="submit" class="register-btn">สมัครสมาชิก</button>
+
+      <!-- Back Button -->
+      <a routerLink="/" class="back-btn">← กลับไปหน้า Login</a>
+    </form>
+
+    <!-- Dragons -->
+    <img src="/game_stores/flying_dragon.png" class="dragon dragon-left" />
+    <img src="/game_stores/Green_Dragon.png" class="dragon dragon-right" />
+  </div>
+</div>

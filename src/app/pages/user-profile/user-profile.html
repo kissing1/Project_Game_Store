@@ -1,4 +1,4 @@
-<div class="profile-container">
+<div class="profile-container"> 
   <div class="background"></div>
   <img src="/game_stores/drogon_fire.png" alt="dragon" class="dragon-top" />
 
@@ -12,7 +12,6 @@
       (click)="isEditing && onAvatarClick()"
     />
 
-    <!-- input file -->
     <input
       type="file"
       #avatarInput
@@ -43,8 +42,10 @@
     </div>
   </div>
 
+  <!-- มังกรเล็ก -->
   <img src="/game_stores/toothless.png" alt="toothless" class="toothless" />
 
+  <!-- กล่องประวัติ -->
   <div class="history-box">
     <h3>ประวัติการใช้งาน</h3>
     <p>เติมเงินเข้าบัญชี {{ '0.00' }} บาท</p>
@@ -60,5 +61,11 @@
       <p class="game-name">เกมที่ซื้อ: <span>{{ game.name }}</span> ราคา: {{ game.price | number }}</p>
       <p class="game-type">ประเภท: {{ game.category }}</p>
     </div>
+  </div>
+
+  <!-- ✅ ปุ่มด้านล่าง -->
+  <div class="bottom-buttons">
+    <button class="btn yellow">เกมของฉัน</button>
+    <button class="btn yellow">+ เติมเงิน</button>
   </div>
 </div>
